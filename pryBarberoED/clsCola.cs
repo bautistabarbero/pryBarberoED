@@ -71,5 +71,33 @@ namespace pryBarberoED
 
 
         }
+
+        public void Recorrer(ListBox Lista)
+        {
+            clsNodo aux = Primero;
+            Lista.Items.Clear();
+
+            while (aux != null)
+            {
+                Lista.Items.Add(aux.Codigo + " - " + aux.Nombre + " -" + aux.Tramite);
+                aux = aux.Siguiente;
+            }
+
+
+        }
+
+        public void Recorrer(ComboBox Combo)
+        {
+            clsNodo aux = Primero;
+            Combo.Items.Clear();
+
+            while (aux != null)
+            {
+                Combo.Items.Add(aux.Codigo + " - " + aux.Nombre + " - " + aux.Tramite);
+                aux = aux.Siguiente;
+            }
+
+
+        }
     }
 }
