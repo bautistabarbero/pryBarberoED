@@ -63,6 +63,16 @@ namespace pryBarberoED.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _0372131b_1ff8_49ce_b14f_2f9a5627c4d4 {
+            get {
+                object obj = ResourceManager.GetObject("0372131b-1ff8-49ce-b14f-2f9a5627c4d4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _0c0305b9_06f0_4512_926f_c5262c257143 {
             get {
                 object obj = ResourceManager.GetObject("0c0305b9-06f0-4512-926f-c5262c257143", resourceCulture);
@@ -73,9 +83,39 @@ namespace pryBarberoED.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1AD878F9_AF2E_400F_98DB_80CD7438AC93_ {
+            get {
+                object obj = ResourceManager.GetObject("{1AD878F9-AF2E-400F-98DB-80CD7438AC93}", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _260413dispatch_banner_600x400 {
             get {
                 object obj = ResourceManager.GetObject("260413dispatch-banner-600x400", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap f16b5588_b7e1_4131_bc07_5e8b22bf6ce8 {
+            get {
+                object obj = ResourceManager.GetObject("f16b5588-b7e1-4131-bc07-5e8b22bf6ce8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap f2daecba_7c8e_494f_b8c6_7f191b81134e {
+            get {
+                object obj = ResourceManager.GetObject("f2daecba-7c8e-494f-b8c6-7f191b81134e", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
