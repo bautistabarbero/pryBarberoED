@@ -105,5 +105,8 @@ namespace pryBarberoED
             StreamWriter AD = new StreamWriter(NomArchi, false);
             AD.Close();
         }
+
+        
+        
     }
 }
