@@ -42,7 +42,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.gbListado = new System.Windows.Forms.GroupBox();
             this.lstListaSimple = new System.Windows.Forms.ListBox();
-            this.dgvPila = new System.Windows.Forms.DataGridView();
+            this.dgvLista = new System.Windows.Forms.DataGridView();
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDeuda = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,7 +50,7 @@
             this.gbElementoaEliminar.SuspendLayout();
             this.gbNuevoElemento.SuspendLayout();
             this.gbListado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbColas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,6 +91,7 @@
             this.btnEliminar.TabIndex = 11;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // gbNuevoElemento
             // 
@@ -155,6 +156,7 @@
             this.btnAgregar.TabIndex = 11;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblNombre
             // 
@@ -168,7 +170,7 @@
             // gbListado
             // 
             this.gbListado.Controls.Add(this.lstListaSimple);
-            this.gbListado.Controls.Add(this.dgvPila);
+            this.gbListado.Controls.Add(this.dgvLista);
             this.gbListado.Location = new System.Drawing.Point(3, 182);
             this.gbListado.Name = "gbListado";
             this.gbListado.Size = new System.Drawing.Size(533, 204);
@@ -178,25 +180,26 @@
             // 
             // lstListaSimple
             // 
+            this.lstListaSimple.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.lstListaSimple.FormattingEnabled = true;
             this.lstListaSimple.Location = new System.Drawing.Point(16, 19);
             this.lstListaSimple.Name = "lstListaSimple";
             this.lstListaSimple.Size = new System.Drawing.Size(157, 160);
             this.lstListaSimple.TabIndex = 12;
             // 
-            // dgvPila
+            // dgvLista
             // 
-            this.dgvPila.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPila.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCodigo,
             this.colNombre,
             this.colDeuda});
-            this.dgvPila.Location = new System.Drawing.Point(179, 19);
-            this.dgvPila.Name = "dgvPila";
-            this.dgvPila.RowHeadersVisible = false;
-            this.dgvPila.RowHeadersWidth = 51;
-            this.dgvPila.Size = new System.Drawing.Size(313, 158);
-            this.dgvPila.TabIndex = 8;
+            this.dgvLista.Location = new System.Drawing.Point(179, 19);
+            this.dgvLista.Name = "dgvLista";
+            this.dgvLista.RowHeadersVisible = false;
+            this.dgvLista.RowHeadersWidth = 51;
+            this.dgvLista.Size = new System.Drawing.Size(313, 158);
+            this.dgvLista.TabIndex = 8;
             // 
             // colCodigo
             // 
@@ -248,7 +251,7 @@
             this.gbNuevoElemento.ResumeLayout(false);
             this.gbNuevoElemento.PerformLayout();
             this.gbListado.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbColas)).EndInit();
             this.ResumeLayout(false);
 
@@ -269,7 +272,7 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.GroupBox gbListado;
         private System.Windows.Forms.ListBox lstListaSimple;
-        private System.Windows.Forms.DataGridView dgvPila;
+        private System.Windows.Forms.DataGridView dgvLista;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDeuda;
