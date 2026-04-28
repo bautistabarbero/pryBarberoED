@@ -10,10 +10,8 @@ namespace pryBarberoED
 {
     internal class clsPila
     {
-        public class clsPila
-        {
-            // Campo de la clase
-            private clsNodo pri;
+        // Campo de la clase
+           private clsNodo pri;
 
             // Propiedad
             public clsNodo Primero
@@ -58,8 +56,31 @@ namespace pryBarberoED
                 }
             }
 
-            // Recorrer y guardar en archivo de texto
-            public void Recorrer(string NmbreArchivo)
+        public void Recorrer(ComboBox Combo)
+        {
+            clsNodo aux = Primero;
+            Combo.Items.Clear();
+
+            while (aux != null)
+            {
+                Combo.Items.Add(aux.Codigo);
+                aux = aux.Siguiente;
+            }
+        }
+
+        public void Recorrer(ListBox Lista)
+        {
+            clsNodo aux = Primero;
+            Lista.Items.Clear();
+
+            while (aux != null)
+            {
+                Lista.Items.Add(aux.Codigo);
+                aux = aux.Siguiente;
+            }
+        }
+        // Recorrer y guardar en archivo de texto
+        public void Recorrer(string NmbreArchivo)
             {
                 clsNodo aux = Primero;
                 StreamWriter AD = new StreamWriter(NmbreArchivo, false, Encoding.UTF8);
@@ -79,5 +100,6 @@ namespace pryBarberoED
 
                 AD.Close();
             }
-        }
+    }
 }
+

@@ -16,5 +16,31 @@ namespace pryBarberoED
         {
             InitializeComponent();
         }
+        cslListaSimple cslListaSimple = new cslListaSimple();
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+           
+
+            {
+                clsNodo n = new clsNodo();
+                n.Codigo = Convert.ToInt32(txtCodigo.Text);
+                n.Nombre = txtNombre.Text;
+                n.Tramite = txtTramite.Text;
+
+                cslListaSimple.Agregar(n);
+                cslListaSimple.Recorrer(dgvLista);
+                cslListaSimple.Recorrer(lstListaSimple);6
+
+                txtCodigo.Text = "";
+                txtNombre.Text = "";
+                txtTramite.Text = "";
+            }
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
