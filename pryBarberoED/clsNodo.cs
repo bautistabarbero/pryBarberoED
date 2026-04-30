@@ -9,7 +9,7 @@ namespace pryBarberoED
         private Int32 cod;
         private string nom;
         private string tra;
-
+        private clsNodo ant;
         private clsNodo sig;
 
         //Propiedades del nodo
@@ -35,6 +35,12 @@ namespace pryBarberoED
         {
             get { return sig; }
             set { sig = value; }
+        }
+
+        public clsNodo Anterior
+        {
+            get { return ant; }
+            set { ant = value; }
         }
     }
 }

@@ -21,5 +21,25 @@ namespace pryBarberoED
         {
 
         }
+
+         
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+            {
+                clsNodo n = new clsNodo();
+                n.Codigo = Convert.ToInt32(txtCodigo.Text);
+                n.Nombre = txtNombre.Text;
+                n.Tramite = txtTramite.Text;
+
+                cslListaDoble.Agregar(n);
+                cslListaDoble.Recorrer(dgvListaDoble);
+                cslListaDoble.Recorrer(lstListaDoble);
+
+                txtCodigo.Text = "";
+                txtNombre.Text = "";
+                txtTramite.Text = "";
+            }
+        }
     }
 }

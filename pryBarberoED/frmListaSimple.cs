@@ -29,7 +29,7 @@ namespace pryBarberoED
 
                 cslListaSimple.Agregar(n);
                 cslListaSimple.Recorrer(dgvLista);
-                cslListaSimple.Recorrer(lstListaSimple);6
+                cslListaSimple.Recorrer(lstListaSimple);
 
                 txtCodigo.Text = "";
                 txtNombre.Text = "";

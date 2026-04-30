@@ -42,18 +42,18 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.gbListado = new System.Windows.Forms.GroupBox();
             this.lstListaDoble = new System.Windows.Forms.ListBox();
-            this.dgvPila = new System.Windows.Forms.DataGridView();
+            this.dgvListaDoble = new System.Windows.Forms.DataGridView();
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDeuda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpListarDatos = new System.Windows.Forms.GroupBox();
-            this.optAscendente = new System.Windows.Forms.RadioButton();
             this.optDescendete = new System.Windows.Forms.RadioButton();
+            this.optAscendente = new System.Windows.Forms.RadioButton();
             this.pbColas = new System.Windows.Forms.PictureBox();
             this.gbElementoaEliminar.SuspendLayout();
             this.gbNuevoElemento.SuspendLayout();
             this.gbListado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).BeginInit();
             this.grpListarDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbColas)).BeginInit();
             this.SuspendLayout();
@@ -159,6 +159,7 @@
             this.btnAgregar.TabIndex = 11;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblNombre
             // 
@@ -172,7 +173,7 @@
             // gbListado
             // 
             this.gbListado.Controls.Add(this.lstListaDoble);
-            this.gbListado.Controls.Add(this.dgvPila);
+            this.gbListado.Controls.Add(this.dgvListaDoble);
             this.gbListado.Location = new System.Drawing.Point(12, 187);
             this.gbListado.Name = "gbListado";
             this.gbListado.Size = new System.Drawing.Size(533, 204);
@@ -188,19 +189,19 @@
             this.lstListaDoble.Size = new System.Drawing.Size(157, 160);
             this.lstListaDoble.TabIndex = 12;
             // 
-            // dgvPila
+            // dgvListaDoble
             // 
-            this.dgvPila.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPila.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvListaDoble.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaDoble.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCodigo,
             this.colNombre,
             this.colDeuda});
-            this.dgvPila.Location = new System.Drawing.Point(179, 19);
-            this.dgvPila.Name = "dgvPila";
-            this.dgvPila.RowHeadersVisible = false;
-            this.dgvPila.RowHeadersWidth = 51;
-            this.dgvPila.Size = new System.Drawing.Size(313, 158);
-            this.dgvPila.TabIndex = 8;
+            this.dgvListaDoble.Location = new System.Drawing.Point(179, 19);
+            this.dgvListaDoble.Name = "dgvListaDoble";
+            this.dgvListaDoble.RowHeadersVisible = false;
+            this.dgvListaDoble.RowHeadersWidth = 51;
+            this.dgvListaDoble.Size = new System.Drawing.Size(313, 158);
+            this.dgvListaDoble.TabIndex = 8;
             // 
             // colCodigo
             // 
@@ -237,17 +238,6 @@
             this.grpListarDatos.TabStop = false;
             this.grpListarDatos.Text = "Listar Datos";
             // 
-            // optAscendente
-            // 
-            this.optAscendente.AutoSize = true;
-            this.optAscendente.Location = new System.Drawing.Point(9, 19);
-            this.optAscendente.Name = "optAscendente";
-            this.optAscendente.Size = new System.Drawing.Size(82, 17);
-            this.optAscendente.TabIndex = 0;
-            this.optAscendente.TabStop = true;
-            this.optAscendente.Text = "Ascendente";
-            this.optAscendente.UseVisualStyleBackColor = true;
-            // 
             // optDescendete
             // 
             this.optDescendete.AutoSize = true;
@@ -258,6 +248,17 @@
             this.optDescendete.TabStop = true;
             this.optDescendete.Text = "Descendente";
             this.optDescendete.UseVisualStyleBackColor = true;
+            // 
+            // optAscendente
+            // 
+            this.optAscendente.AutoSize = true;
+            this.optAscendente.Location = new System.Drawing.Point(9, 19);
+            this.optAscendente.Name = "optAscendente";
+            this.optAscendente.Size = new System.Drawing.Size(82, 17);
+            this.optAscendente.TabIndex = 0;
+            this.optAscendente.TabStop = true;
+            this.optAscendente.Text = "Ascendente";
+            this.optAscendente.UseVisualStyleBackColor = true;
             // 
             // pbColas
             // 
@@ -287,7 +288,7 @@
             this.gbNuevoElemento.ResumeLayout(false);
             this.gbNuevoElemento.PerformLayout();
             this.gbListado.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).EndInit();
             this.grpListarDatos.ResumeLayout(false);
             this.grpListarDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbColas)).EndInit();
@@ -311,7 +312,7 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.GroupBox gbListado;
         private System.Windows.Forms.ListBox lstListaDoble;
-        private System.Windows.Forms.DataGridView dgvPila;
+        private System.Windows.Forms.DataGridView dgvListaDoble;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDeuda;
