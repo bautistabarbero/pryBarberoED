@@ -58,6 +58,10 @@ namespace pryBarberoED
                         {
                             Ant = Aux;
                             Aux = Aux.Siguiente;
+                            if (Aux == null)
+                            {
+                                break;
+                            }
                         }
                         Ant.Siguiente = nuevo;
                         nuevo.Anterior = Aux;
@@ -71,7 +75,7 @@ namespace pryBarberoED
             }
         }
 
-            // Recorrer y mostrar en DataGridView
+        // Recorrer y mostrar en DataGridView
         public void Recorrer(DataGridView Grilla)
         {
             clsNodo aux = Primero;
@@ -128,6 +132,45 @@ namespace pryBarberoED
 
             AD.Close();
         }
+
+        public void Eliminar(Int32 Codigo)
+        {
+            if (Primero.Codigo == Codigo && Ultimo == Primero)
+            {
+                Primero = null;
+                Ultimo = null;
+            }
+            else
+            {
+                if (Primero.Codigo == Codigo)
+                {
+                    Primero = Primero.Siguiente;
+                    Primero.Anterior = null;
+                }
+                else
+                {
+                    if (Ultimo.Codigo == Codigo)
+                    {
+                        Ultimo = Ultimo.Anterior;
+                        Ultimo.Siguiente = null;
+                    }
+                    else
+                    {
+                        clsNodo Aux = Primero;
+                        clsNodo Ant = Primero;
+                        while (Aux.Codigo < Codigo)
+                        {
+                            Ant = Aux;
+                            Aux = Aux.Siguiente;
+                        }
+                        Aux = Aux.Siguiente;
+                        Aux.Anterior = Ant;
+                        Ant.Siguiente = Aux;
+                    }
+                }
+
+            }
+        }
+
     }
-    
 }

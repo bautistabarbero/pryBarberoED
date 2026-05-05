@@ -22,7 +22,8 @@ namespace pryBarberoED
 
         }
 
-         
+        cslListaDoble objLista = new cslListaDoble();
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
 
@@ -32,9 +33,9 @@ namespace pryBarberoED
                 n.Nombre = txtNombre.Text;
                 n.Tramite = txtTramite.Text;
 
-                cslListaDoble.Agregar(n);
-                cslListaDoble.Recorrer(dgvListaDoble);
-                cslListaDoble.Recorrer(lstListaDoble);
+                objLista.Agregar(n);
+                objLista.Recorrer(dgvListaDoble);
+                objLista.Recorrer(lstListaDoble);
 
                 txtCodigo.Text = "";
                 txtNombre.Text = "";
